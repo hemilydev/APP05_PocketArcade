@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/neo_fundo"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="@dimen/tamanho_logo"
+        android:layout_height="@dimen/tamanho_logo"
+        android:layout_marginTop="@dimen/espaco_m"
+        android:contentDescription="@string/t1_desc_logo"
+        android:src="@drawable/ic_logo"
+        app:tint="@color/neo_rosa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/t1_titulo"
+        android:textColor="@color/neo_ciano"
+        android:textSize="@dimen/texto_titulo"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivLogo" />
+
+    <TextView
+        android:id="@+id/tvSubtitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espaco_p"
+        android:text="@string/t1_subtitulo"
+        android:textColor="@color/neo_texto_suave"
+        android:textSize="@dimen/texto_subtitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitulo" />
+
+    <View
+        android:id="@+id/divisor"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/borda_card"
+        android:layout_marginTop="@dimen/espaco_m"
+        android:background="@color/neo_ciano"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitulo" />
+
+    <LinearLayout
+        android:id="@+id/cardIntegrantes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espaco_m"
+        android:background="@drawable/bg_card"
+        android:orientation="vertical"
+        android:padding="@dimen/espaco_m"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divisor">
+
+        <TextView
+            android:id="@+id/tvIntegrante1Nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/t1_integrante1_nome"
+            android:textColor="@color/neo_texto"
+            android:textSize="@dimen/texto_corpo"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvIntegrante1Matricula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/t1_integrante1_matricula"
+            android:textColor="@color/neo_texto_suave"
+            android:textSize="@dimen/texto_pequeno" />
+
+        <TextView
+            android:id="@+id/tvIntegrante2Nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_p"
+            android:text="@string/t1_integrante2_nome"
+            android:textColor="@color/neo_texto"
+            android:textSize="@dimen/texto_corpo"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvIntegrante2Matricula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/t1_integrante2_matricula"
+            android:textColor="@color/neo_texto_suave"
+            android:textSize="@dimen/texto_pequeno" />
+
+        <TextView
+            android:id="@+id/tvCurso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_p"
+            android:text="@string/t1_curso"
+            android:textColor="@color/neo_ciano"
+            android:textSize="@dimen/texto_pequeno" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvLabelApelido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espaco_g"
+        android:text="@string/t1_label_apelido"
+        android:textColor="@color/neo_texto"
+        android:textSize="@dimen/texto_corpo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cardIntegrantes" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilApelido"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espaco_p"
+        android:hint="@string/t1_hint_apelido"
+        app:boxStrokeColor="@color/neo_ciano"
+        app:hintTextColor="@color/neo_ciano"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLabelApelido">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etApelido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionDone"
+            android:inputType="textPersonName"
+            android:maxLength="20"
+            android:textColor="@color/neo_texto" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEntrar"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/altura_botao"
+        android:layout_marginTop="@dimen/espaco_m"
+        android:backgroundTint="@color/neo_rosa"
+        android:text="@string/t1_btn_entrar"
+        android:textColor="@color/neo_fundo"
+        android:textSize="@dimen/texto_corpo"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tilApelido" />
+
+    <TextView
+        android:id="@+id/tvUltimoModulo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espaco_m"
+        android:gravity="center"
+        android:textColor="@color/neo_ciano"
+        android:textSize="@dimen/texto_pequeno"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnEntrar" />
+
+    <TextView
+        android:id="@+id/tvRodape"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/t1_rodape"
+        android:textColor="@color/neo_texto_suave"
+        android:textSize="@dimen/texto_pequeno"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

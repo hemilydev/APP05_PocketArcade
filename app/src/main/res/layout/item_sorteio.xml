@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/espaco_pp"
+    android:background="@drawable/bg_card"
+    android:orientation="vertical"
+    android:padding="@dimen/espaco_m">
+
+    <TextView
+        android:id="@+id/tvPalavra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/neo_texto"
+        android:textSize="@dimen/texto_corpo"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/espaco_pp"
+        android:textColor="@color/neo_ciano"
+        android:textSize="@dimen/texto_pequeno" />
+</LinearLayout>

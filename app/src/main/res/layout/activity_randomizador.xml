@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/neo_fundo"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".RandomizadorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/espaco_g">
+
+        <TextView
+            android:id="@+id/tvTituloRandom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/t6_titulo"
+            android:textColor="@color/neo_ciano"
+            android:textSize="@dimen/texto_titulo"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_pp"
+            android:text="@string/t6_desc"
+            android:textColor="@color/neo_texto_suave"
+            android:textSize="@dimen/texto_pequeno" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPalavra"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_p"
+            android:hint="@string/t6_hint"
+            app:boxStrokeColor="@color/neo_ciano"
+            app:hintTextColor="@color/neo_ciano">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPalavra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="textCapSentences"
+                android:maxLength="40"
+                android:textColor="@color/neo_texto" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_p"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/spCategoria"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/altura_botao"
+                android:layout_weight="1"
+                android:contentDescription="@string/t6_spinner_desc"
+                android:popupBackground="@color/neo_superficie" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAdicionar"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/altura_botao"
+                android:layout_marginStart="@dimen/espaco_p"
+                android:backgroundTint="@color/neo_rosa"
+                android:text="@string/t6_btn_adicionar"
+                android:textColor="@color/neo_fundo"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_p"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSortear"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/altura_botao"
+                android:layout_marginEnd="@dimen/espaco_p"
+                android:layout_weight="1"
+                android:backgroundTint="@color/neo_ciano"
+                android:text="@string/t6_btn_sortear"
+                android:textColor="@color/neo_fundo"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAlternar"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/altura_botao"
+                android:layout_marginStart="@dimen/espaco_p"
+                android:layout_weight="1"
+                android:text="@string/t6_btn_grade"
+                android:textColor="@color/neo_ciano"
+                app:strokeColor="@color/neo_ciano" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/painelSorteio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_p"
+            android:background="@drawable/bg_resultado"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/espaco_p">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/t6_sorteado_titulo"
+                android:textColor="@color/neo_texto_suave"
+                android:textSize="@dimen/texto_pequeno" />
+
+            <TextView
+                android:id="@+id/tvSorteado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/t6_sorteado_vazio"
+                android:textColor="@color/neo_rosa"
+                android:textSize="@dimen/texto_subtitulo"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_p"
+            android:text="@string/t6_instrucao"
+            android:textColor="@color/neo_texto_suave"
+            android:textSize="@dimen/texto_pequeno" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvItens"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/espaco_pp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_p"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnVoltarRandom"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/altura_botao"
+                android:layout_marginEnd="@dimen/espaco_p"
+                android:layout_weight="1"
+                android:text="@string/btn_voltar"
+                android:textColor="@color/neo_texto"
+                app:strokeColor="@color/neo_roxo" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEncerrarRandom"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/altura_botao"
+                android:layout_weight="1"
+                android:text="@string/btn_encerrar"
+                android:textColor="@color/neo_erro" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

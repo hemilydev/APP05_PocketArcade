@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollCentral"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/neo_fundo"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    tools:context=".CentralActivity">
+
+    <!-- ÚNICO filho direto do NestedScrollView -->
+    <LinearLayout
+        android:id="@+id/conteudoCentral"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/espaco_g">
+
+        <TextView
+            android:id="@+id/tvSaudacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/neo_ciano"
+            android:textSize="@dimen/texto_titulo"
+            android:textStyle="bold"
+            tools:text="Olá, jogador!" />
+
+        <TextView
+            android:id="@+id/tvSubtituloCentral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_p"
+            android:layout_marginBottom="@dimen/espaco_m"
+            android:text="@string/t2_subtitulo"
+            android:textColor="@color/neo_texto_suave"
+            android:textSize="@dimen/texto_corpo" />
+
+        <!-- ===== Painel 1: Scanner ===== -->
+        <LinearLayout
+            android:id="@+id/painelScanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_m"
+            android:background="@drawable/bg_card"
+            android:orientation="horizontal"
+            android:padding="@dimen/espaco_m">
+
+            <ImageView
+                android:id="@+id/ivScanner"
+                android:layout_width="@dimen/icone_painel"
+                android:layout_height="@dimen/icone_painel"
+                android:contentDescription="@string/t2_scanner_img"
+                android:src="@drawable/ic_scanner"
+                app:tint="@color/neo_rosa" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/espaco_m"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvScannerTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/t2_scanner_titulo"
+                    android:textColor="@color/neo_texto"
+                    android:textSize="@dimen/texto_subtitulo"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvScannerDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_p"
+                    android:text="@string/t2_scanner_desc"
+                    android:textColor="@color/neo_texto_suave"
+                    android:textSize="@dimen/texto_pequeno" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAbrirScanner"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_p"
+                    android:text="@string/t2_btn_abrir"
+                    android:textColor="@color/neo_rosa"
+                    app:strokeColor="@color/neo_rosa" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===== Painel 2: Arena ===== -->
+        <LinearLayout
+            android:id="@+id/painelArena"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_m"
+            android:background="@drawable/bg_card"
+            android:orientation="horizontal"
+            android:padding="@dimen/espaco_m">
+
+            <ImageView
+                android:id="@+id/ivArena"
+                android:layout_width="@dimen/icone_painel"
+                android:layout_height="@dimen/icone_painel"
+                android:contentDescription="@string/t2_arena_img"
+                android:src="@drawable/ic_arena"
+                app:tint="@color/neo_ciano" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/espaco_m"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvArenaTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/t2_arena_titulo"
+                    android:textColor="@color/neo_texto"
+                    android:textSize="@dimen/texto_subtitulo"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvArenaDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_p"
+                    android:text="@string/t2_arena_desc"
+                    android:textColor="@color/neo_texto_suave"
+                    android:textSize="@dimen/texto_pequeno" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAbrirArena"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_p"
+                    android:text="@string/t2_btn_abrir"
+                    android:textColor="@color/neo_ciano"
+                    app:strokeColor="@color/neo_ciano" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===== Painel 3: Código Secreto ===== -->
+        <LinearLayout
+            android:id="@+id/painelCodigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_m"
+            android:background="@drawable/bg_card"
+            android:orientation="horizontal"
+            android:padding="@dimen/espaco_m">
+
+            <ImageView
+                android:id="@+id/ivCodigo"
+                android:layout_width="@dimen/icone_painel"
+                android:layout_height="@dimen/icone_painel"
+                android:contentDescription="@string/t2_codigo_img"
+                android:src="@drawable/ic_codigo"
+                app:tint="@color/neo_roxo" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/espaco_m"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvCodigoTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/t2_codigo_titulo"
+                    android:textColor="@color/neo_texto"
+                    android:textSize="@dimen/texto_subtitulo"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvCodigoDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_p"
+                    android:text="@string/t2_codigo_desc"
+                    android:textColor="@color/neo_texto_suave"
+                    android:textSize="@dimen/texto_pequeno" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAbrirCodigo"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_p"
+                    android:text="@string/t2_btn_abrir"
+                    android:textColor="@color/neo_roxo"
+                    app:strokeColor="@color/neo_roxo" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===== Painel 4: Randomizador ===== -->
+        <LinearLayout
+            android:id="@+id/painelRandom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_m"
+            android:background="@drawable/bg_card"
+            android:orientation="horizontal"
+            android:padding="@dimen/espaco_m">
+
+            <ImageView
+                android:id="@+id/ivRandom"
+                android:layout_width="@dimen/icone_painel"
+                android:layout_height="@dimen/icone_painel"
+                android:contentDescription="@string/t2_random_img"
+                android:src="@drawable/ic_random"
+                app:tint="@color/neo_rosa" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/espaco_m"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvRandomTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/t2_random_titulo"
+                    android:textColor="@color/neo_texto"
+                    android:textSize="@dimen/texto_subtitulo"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvRandomDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_p"
+                    android:text="@string/t2_random_desc"
+                    android:textColor="@color/neo_texto_suave"
+                    android:textSize="@dimen/texto_pequeno" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAbrirRandom"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_p"
+                    android:text="@string/t2_btn_abrir"
+                    android:textColor="@color/neo_rosa"
+                    app:strokeColor="@color/neo_rosa" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- ===== Conteúdo extra (garante a rolagem) ===== -->
+        <LinearLayout
+            android:id="@+id/cardDica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_g"
+            android:background="@drawable/bg_resultado"
+            android:orientation="vertical"
+            android:padding="@dimen/espaco_m">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/t2_dica_titulo"
+                android:textColor="@color/neo_ciano"
+                android:textSize="@dimen/texto_subtitulo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_p"
+                android:text="@string/t2_dica_texto"
+                android:textColor="@color/neo_texto"
+                android:textSize="@dimen/texto_pequeno" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardSobre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_m"
+            android:background="@drawable/bg_resultado"
+            android:orientation="vertical"
+            android:padding="@dimen/espaco_m">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/t2_sobre_titulo"
+                android:textColor="@color/neo_ciano"
+                android:textSize="@dimen/texto_subtitulo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_p"
+                android:text="@string/t2_sobre_texto"
+                android:textColor="@color/neo_texto"
+                android:textSize="@dimen/texto_pequeno" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cardCreditos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_m"
+            android:layout_marginBottom="@dimen/espaco_g"
+            android:background="@drawable/bg_resultado"
+            android:orientation="vertical"
+            android:padding="@dimen/espaco_m">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/t2_creditos_titulo"
+                android:textColor="@color/neo_ciano"
+                android:textSize="@dimen/texto_subtitulo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvCreditos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_p"
+                android:text="@string/t2_creditos_texto"
+                android:textColor="@color/neo_texto"
+                android:textSize="@dimen/texto_pequeno" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

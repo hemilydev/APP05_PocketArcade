@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Identidade Pixel Quest (aventura 8-bit) -->
+    <color name="neo_fundo">#0F1A0F</color>
+    <color name="neo_superficie">#1B2B17</color>
+    <color name="neo_card">#26381F</color>
+    <color name="neo_rosa">#F4C430</color>
+    <color name="neo_ciano">#7CC242</color>
+    <color name="neo_roxo">#8B5A2B</color>
+    <color name="neo_texto">#F3EBD3</color>
+    <color name="neo_texto_suave">#B9AE8E</color>
+    <color name="neo_erro">#E4572E</color>
+
+    <!-- Pistas do Código Secreto (estilo TERMO) -->
+    <color name="termo_verde">#43A047</color>
+    <color name="termo_amarelo">#FBC02D</color>
+    <color name="termo_cinza">#5D5D5D</color>
+</resources>

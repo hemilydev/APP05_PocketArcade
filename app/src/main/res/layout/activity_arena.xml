@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/neo_fundo"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    tools:context=".ArenaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/espaco_g">
+
+        <TextView
+            android:id="@+id/tvTituloArena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/t4_titulo"
+            android:textColor="@color/neo_ciano"
+            android:textSize="@dimen/texto_titulo"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvRegra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_p"
+            android:text="@string/t4_regra"
+            android:textColor="@color/neo_texto_suave"
+            android:textSize="@dimen/texto_pequeno" />
+
+        <!-- Placar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_m"
+            android:background="@drawable/bg_card"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/espaco_m">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/t4_voce"
+                android:textColor="@color/neo_texto"
+                android:textSize="@dimen/texto_corpo" />
+
+            <TextView
+                android:id="@+id/tvPlacar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/neo_rosa"
+                android:textSize="@dimen/texto_titulo"
+                android:textStyle="bold"
+                tools:text="0 × 0" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/t4_dispositivo"
+                android:textColor="@color/neo_texto"
+                android:textSize="@dimen/texto_corpo" />
+        </LinearLayout>
+
+        <!-- Confronto: jogador × dispositivo -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_m"
+            android:background="@drawable/bg_resultado"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/espaco_m">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivJogador"
+                    android:layout_width="@dimen/icone_jogada"
+                    android:layout_height="@dimen/icone_jogada"
+                    android:contentDescription="@string/t4_img_jogador"
+                    android:src="@drawable/ic_interrogacao"
+                    app:tint="@color/neo_ciano" />
+
+                <TextView
+                    android:id="@+id/tvNomeJogador"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_p"
+                    android:text="@string/t4_indefinido"
+                    android:textColor="@color/neo_ciano"
+                    android:textSize="@dimen/texto_corpo"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/t4_vs"
+                android:textColor="@color/neo_roxo"
+                android:textSize="@dimen/texto_subtitulo"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/ivDispositivo"
+                    android:layout_width="@dimen/icone_jogada"
+                    android:layout_height="@dimen/icone_jogada"
+                    android:contentDescription="@string/t4_img_dispositivo"
+                    android:src="@drawable/ic_interrogacao"
+                    app:tint="@color/neo_rosa" />
+
+                <TextView
+                    android:id="@+id/tvNomeDispositivo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_p"
+                    android:text="@string/t4_indefinido"
+                    android:textColor="@color/neo_rosa"
+                    android:textSize="@dimen/texto_corpo"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Mensagem de resultado -->
+        <TextView
+            android:id="@+id/tvResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_m"
+            android:gravity="center"
+            android:text="@string/t4_aguardando"
+            android:textColor="@color/neo_texto"
+            android:textSize="@dimen/texto_subtitulo"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_g"
+            android:text="@string/t4_escolha"
+            android:textColor="@color/neo_texto"
+            android:textSize="@dimen/texto_corpo" />
+
+        <!-- Três botões com imagens -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_p"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btnPedra"
+                    android:layout_width="@dimen/icone_jogada"
+                    android:layout_height="@dimen/icone_jogada"
+                    android:background="@drawable/bg_card"
+                    android:contentDescription="@string/t4_img_pedra"
+                    android:padding="@dimen/espaco_m"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_pedra"
+                    app:tint="@color/neo_ciano" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_p"
+                    android:text="@string/t4_pedra"
+                    android:textColor="@color/neo_texto" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btnPapel"
+                    android:layout_width="@dimen/icone_jogada"
+                    android:layout_height="@dimen/icone_jogada"
+                    android:background="@drawable/bg_card"
+                    android:contentDescription="@string/t4_img_papel"
+                    android:padding="@dimen/espaco_m"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_papel"
+                    app:tint="@color/neo_ciano" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_p"
+                    android:text="@string/t4_papel"
+                    android:textColor="@color/neo_texto" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/btnTesoura"
+                    android:layout_width="@dimen/icone_jogada"
+                    android:layout_height="@dimen/icone_jogada"
+                    android:background="@drawable/bg_card"
+                    android:contentDescription="@string/t4_img_tesoura"
+                    android:padding="@dimen/espaco_m"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_tesoura"
+                    app:tint="@color/neo_ciano" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espaco_p"
+                    android:text="@string/t4_tesoura"
+                    android:textColor="@color/neo_texto" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnNovaPartida"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/altura_botao"
+            android:layout_marginTop="@dimen/espaco_g"
+            android:backgroundTint="@color/neo_rosa"
+            android:text="@string/btn_nova_partida"
+            android:textColor="@color/neo_fundo"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:minHeight="@dimen/espaco_m" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVoltarArena"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/altura_botao"
+            android:text="@string/btn_voltar"
+            android:textColor="@color/neo_texto"
+            app:strokeColor="@color/neo_roxo" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEncerrarArena"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/altura_botao"
+            android:layout_marginTop="@dimen/espaco_p"
+            android:text="@string/btn_encerrar"
+            android:textColor="@color/neo_erro" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

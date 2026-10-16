@@ -1,0 +1,171 @@
+<resources>
+    <string name="app_name">Pixel Quest</string>
+
+    <!-- ===== Gerais ===== -->
+    <string name="btn_voltar">Voltar ao mapa</string>
+    <string name="btn_encerrar">Encerrar sessão</string>
+    <string name="btn_nova_partida">Nova partida</string>
+    <string name="apelido_padrao">herói</string>
+
+    <!-- Nomes dos módulos (usados no "último módulo usado") -->
+    <string name="modulo_scanner">Scanner de Pergaminhos</string>
+    <string name="modulo_arena">Arena do Cavaleiro</string>
+    <string name="modulo_codigo">Baú do Código Secreto</string>
+    <string name="modulo_random">Sorteador de Missões</string>
+
+    <!-- ===== Tela 1 · Apresentação ===== -->
+    <string name="t1_titulo">Pixel Quest</string>
+    <string name="t1_subtitulo">Uma aventura 8-bit em quatro fases</string>
+    <string name="t1_desc_logo">Logotipo do Pixel Quest: coroa dourada em pixel art</string>
+    <string name="t1_integrante1_nome">Gabriel Brito Falcão</string>
+    <string name="t1_integrante1_matricula">Matrícula: 2024.2.0120.0004-0</string>
+    <string name="t1_integrante2_nome">Hemily Barbuda de Jesus Ramos</string>
+    <string name="t1_integrante2_matricula">Matrícula: 2026.1.0120.0103-5</string>
+    <string name="t1_curso">Análise e Desenvolvimento de Sistemas · PUC Goiás</string>
+    <string name="t1_label_apelido">Nome do herói</string>
+    <string name="t1_hint_apelido">Digite o nome do seu herói</string>
+    <string name="t1_btn_entrar">Começar a aventura</string>
+    <string name="t1_rodape">Trabalho em dupla</string>
+    <string name="t1_erro_apelido">O nome do herói precisa ter pelo menos 3 caracteres</string>
+    <string name="t1_sessao_encerrada">Aventura encerrada! Última fase jogada: %1$s</string>
+
+    <!-- ===== Tela 2 · Central de Desafios ===== -->
+    <string name="t2_saudacao">Bem-vindo, %1$s!</string>
+    <string name="t2_subtitulo">O mapa está aberto. Escolha sua próxima fase.</string>
+    <string name="t2_btn_abrir">Jogar</string>
+
+    <string name="t2_scanner_titulo">Pergaminhos</string>
+    <string name="t2_scanner_desc">Decifre uma mensagem: letras, palavras, vogais, texto ao contrário e palíndromo.</string>
+    <string name="t2_scanner_img">Ícone de página com lupa</string>
+
+    <string name="t2_arena_titulo">Arena</string>
+    <string name="t2_arena_desc">Enfrente o dragão numa melhor de três de Pedra, Papel e Tesoura.</string>
+    <string name="t2_arena_img">Ícone de mão aberta</string>
+
+    <string name="t2_codigo_titulo">Baú Secreto</string>
+    <string name="t2_codigo_desc">Descubra a combinação de quatro dígitos em até oito tentativas.</string>
+    <string name="t2_codigo_img">Ícone de cadeado</string>
+
+    <string name="t2_random_titulo">Missões</string>
+    <string name="t2_random_desc">Monte sua lista de missões por categoria e deixe o destino escolher.</string>
+    <string name="t2_random_img">Ícone de setas embaralhadas</string>
+
+    <string name="t2_dica_titulo">Dica do mago</string>
+    <string name="t2_dica_texto">Todo herói começa decifrando pergaminhos. Depois vença o dragão, abra o baú e sorteie sua próxima missão.</string>
+    <string name="t2_sobre_titulo">Sobre o Pixel Quest</string>
+    <string name="t2_sobre_texto">Aplicativo desenvolvido em Java e XML para a disciplina de Desenvolvimento de Aplicações para Dispositivos Móveis, inspirado nos jogos de aventura 8-bit.</string>
+    <string name="t2_creditos_titulo">Créditos de imagens e sons</string>
+    <string name="t2_creditos_texto">Ícones: Material Icons (Google), licença Apache 2.0. Coroa e pedra: desenhos próprios.\n\nSons (Pixabay · Pixabay Content License):\n• Drop Coin, de freesound_gamestudio\n• Level Passed, de Universfield\n• fail, de u_8g40a9z0la\n• 11L-Victory_sound_with_t-1749487402950, de PeekabooLabCreative</string>
+
+    <!-- ===== Tela 3 · Scanner de Mensagens ===== -->
+    <string name="t3_titulo">Scanner de Pergaminhos</string>
+    <string name="t3_desc">Escreva uma mensagem com pelo menos 3 caracteres e descubra seus segredos.</string>
+    <string name="t3_hint">Escreva no pergaminho</string>
+    <string name="t3_btn_analisar">Analisar</string>
+    <string name="t3_btn_limpar">Limpar</string>
+    <string name="t3_erro_vazio">O pergaminho está em branco. Escreva algo!</string>
+    <string name="t3_erro_curto">A mensagem precisa ter pelo menos 3 caracteres</string>
+    <string name="t3_col_medida">Medida</string>
+    <string name="t3_col_resultado">Resultado</string>
+    <string name="t3_caracteres">Caracteres sem espaços</string>
+    <string name="t3_palavras">Palavras</string>
+    <string name="t3_vogais">Vogais</string>
+    <string name="t3_invertido">Texto invertido</string>
+    <string name="t3_palindromo">Palíndromo</string>
+    <string name="t3_sim">Sim</string>
+    <string name="t3_nao">Não</string>
+
+    <!-- ===== Tela 4 · Arena ===== -->
+    <string name="t4_titulo">Arena do Cavaleiro</string>
+    <string name="t4_escolha">Escolha seu golpe</string>
+    <string name="t4_pedra">Pedra</string>
+    <string name="t4_papel">Papel</string>
+    <string name="t4_tesoura">Tesoura</string>
+    <string name="t4_img_pedra">Botão com imagem de pedra</string>
+    <string name="t4_img_papel">Botão com imagem de papel</string>
+    <string name="t4_img_tesoura">Botão com imagem de tesoura</string>
+    <string name="t4_img_jogador">Golpe escolhido pelo herói</string>
+    <string name="t4_img_dispositivo">Golpe sorteado pelo dragão (dispositivo)</string>
+    <string name="t4_regra">Melhor de três: vence quem fizer 2 pontos primeiro. Empates não somam pontos.</string>
+    <string name="t4_voce">Herói</string>
+    <string name="t4_dispositivo">Dragão</string>
+    <string name="t4_placar">%1$d × %2$d</string>
+    <string name="t4_aguardando">O dragão espera seu golpe!</string>
+    <string name="t4_vs">VS</string>
+    <string name="t4_indefinido">\?</string>
+    <string name="t4_rodada_vitoria">Golpe certeiro! A rodada é sua.</string>
+    <string name="t4_rodada_derrota">O dragão venceu a rodada!</string>
+    <string name="t4_rodada_empate">Empate! Ninguém pontua.</string>
+    <string name="t4_final_vitoria">⚔️ Vitória! O herói derrotou o dragão.</string>
+    <string name="t4_final_derrota">🐉 Derrota! O dragão venceu a batalha.</string>
+
+    <!-- ===== Tela 5 · Código Secreto ===== -->
+    <string name="t5_titulo">Baú do Código Secreto</string>
+    <string name="t5_desc">O baú guarda 4 dígitos diferentes. Você tem até 8 tentativas para abri-lo.</string>
+    <string name="t5_mascara">\? \? \? \?</string>
+    <string name="t5_hint">Digite quatro números diferentes</string>
+    <string name="t5_btn_tentar">Tentar abrir</string>
+    <string name="t5_tentativas">Tentativa %1$d de %2$d</string>
+    <string name="t5_erro_vazio">Digite uma combinação antes de tentar</string>
+    <string name="t5_erro_tamanho">A combinação precisa ter exatamente 4 números</string>
+    <string name="t5_erro_repetido">Não repita dígitos: os 4 números devem ser diferentes</string>
+    <string name="t5_legenda_verde">Verde: dígito certo na posição certa</string>
+    <string name="t5_legenda_amarelo">Amarelo: dígito existe, mas em outra posição</string>
+    <string name="t5_legenda_cinza">Cinza: dígito não existe na combinação</string>
+    <string name="t5_historico_titulo">Diário de tentativas</string>
+    <string name="t5_historico_vazio">Nenhuma tentativa registrada.</string>
+    <string name="t5_linha">%1$dª  </string>
+    <string name="t5_vitoria">💰 Baú aberto!\nCombinação: %1$s\nTentativas: %2$d · Tempo: %3$d s</string>
+    <string name="t5_derrota">💀 O baú continua trancado!\nA combinação era %1$s\nTentativas: %2$d · Tempo: %3$d s</string>
+
+    <!-- ===== Tela 6 · Randomizador ===== -->
+    <string name="t6_titulo">Sorteador de Missões</string>
+    <string name="t6_desc">Cadastre itens, escolha a categoria e deixe o destino decidir.</string>
+    <string name="t6_hint">Digite um item</string>
+    <string name="t6_spinner_desc">Seleção de categoria</string>
+    <string name="t6_btn_adicionar">Adicionar</string>
+    <string name="t6_btn_sortear">Sortear</string>
+    <string name="t6_btn_grade">Ver em grade</string>
+    <string name="t6_btn_lista">Ver em lista</string>
+    <string name="t6_instrucao">Segure um item para excluí-lo.</string>
+    <string name="t6_erro_vazio">Digite um item antes de adicionar</string>
+    <string name="t6_adicionado">Item adicionado: %1$s</string>
+    <string name="t6_removido">Item removido: %1$s</string>
+    <string name="t6_sem_itens">Nenhum item em %1$s para sortear</string>
+    <string name="t6_sorteado_titulo">O destino escolheu</string>
+    <string name="t6_sorteado_vazio">Aguardando o sorteio…</string>
+    <string name="t6_sorteado_formato">%1$s · %2$s</string>
+
+    <string-array name="t6_categorias">
+        <item>Filmes</item>
+        <item>Comidas</item>
+        <item>Lugares</item>
+        <item>Desafios</item>
+        <item>Jogos</item>
+    </string-array>
+
+    <string-array name="t6_exemplos_palavras">
+        <item>O Senhor dos Anéis</item>
+        <item>Shrek</item>
+        <item>Pamonha</item>
+        <item>Pão de queijo</item>
+        <item>Caldas Novas</item>
+        <item>Cidade de Goiás</item>
+        <item>Falar como um pirata</item>
+        <item>Fazer 10 polichinelos</item>
+        <item>Minecraft</item>
+        <item>The Legend of Zelda</item>
+    </string-array>
+    <string-array name="t6_exemplos_categorias">
+        <item>Filmes</item>
+        <item>Filmes</item>
+        <item>Comidas</item>
+        <item>Comidas</item>
+        <item>Lugares</item>
+        <item>Lugares</item>
+        <item>Desafios</item>
+        <item>Desafios</item>
+        <item>Jogos</item>
+        <item>Jogos</item>
+    </string-array>
+</resources>

@@ -1,0 +1,17 @@
+<resources>
+    <style name="Base.Theme.PixelQuest" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/neo_rosa</item>
+        <item name="colorOnPrimary">@color/neo_fundo</item>
+        <item name="colorSecondary">@color/neo_ciano</item>
+        <item name="colorOnSecondary">@color/neo_fundo</item>
+        <item name="colorSurface">@color/neo_superficie</item>
+        <item name="colorOnSurface">@color/neo_texto</item>
+        <item name="colorError">@color/neo_erro</item>
+        <item name="android:colorBackground">@color/neo_fundo</item>
+        <item name="android:windowBackground">@color/neo_fundo</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="fontFamily">monospace</item>
+    </style>
+
+    <style name="Theme.PixelQuest" parent="Base.Theme.PixelQuest" />
+</resources>

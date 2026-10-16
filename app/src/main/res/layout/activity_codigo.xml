@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/neo_fundo"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    tools:context=".CodigoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/espaco_g">
+
+        <TextView
+            android:id="@+id/tvTituloCodigo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/t5_titulo"
+            android:textColor="@color/neo_ciano"
+            android:textSize="@dimen/texto_titulo"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvDescCodigo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_p"
+            android:text="@string/t5_desc"
+            android:textColor="@color/neo_texto_suave"
+            android:textSize="@dimen/texto_pequeno" />
+
+        <TextView
+            android:id="@+id/tvMascara"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_m"
+            android:background="@drawable/bg_card"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:letterSpacing="0.3"
+            android:padding="@dimen/espaco_m"
+            android:text="@string/t5_mascara"
+            android:textColor="@color/neo_rosa"
+            android:textSize="@dimen/texto_titulo"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvTentativas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/espaco_p"
+            android:textColor="@color/neo_texto_suave"
+            android:textSize="@dimen/texto_pequeno"
+            tools:text="Tentativa 1 de 8" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilTentativa"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_m"
+            android:hint="@string/t5_hint"
+            app:boxStrokeColor="@color/neo_ciano"
+            app:hintTextColor="@color/neo_ciano">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etTentativa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="4"
+                android:textColor="@color/neo_texto"
+                android:textSize="@dimen/texto_subtitulo" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTentar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/altura_botao"
+            android:layout_marginTop="@dimen/espaco_m"
+            android:backgroundTint="@color/neo_rosa"
+            android:text="@string/t5_btn_tentar"
+            android:textColor="@color/neo_fundo"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_m"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="@dimen/espaco_m">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/t5_legenda_verde"
+                android:textColor="@color/termo_verde"
+                android:textSize="@dimen/texto_pequeno" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_p"
+                android:text="@string/t5_legenda_amarelo"
+                android:textColor="@color/termo_amarelo"
+                android:textSize="@dimen/texto_pequeno" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espaco_p"
+                android:text="@string/t5_legenda_cinza"
+                android:textColor="@color/neo_texto_suave"
+                android:textSize="@dimen/texto_pequeno" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/painelConclusao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_m"
+            android:background="@drawable/bg_resultado"
+            android:orientation="vertical"
+            android:padding="@dimen/espaco_m"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvConclusao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/espaco_pp"
+                android:textColor="@color/neo_texto"
+                android:textSize="@dimen/texto_subtitulo"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnNovaPartidaCodigo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/altura_botao"
+                android:layout_marginTop="@dimen/espaco_m"
+                android:backgroundTint="@color/neo_ciano"
+                android:text="@string/btn_nova_partida"
+                android:textColor="@color/neo_fundo"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_g"
+            android:text="@string/t5_historico_titulo"
+            android:textColor="@color/neo_ciano"
+            android:textSize="@dimen/texto_corpo"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvHistorico"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espaco_p"
+            android:fontFamily="monospace"
+            android:lineSpacingExtra="@dimen/espaco_linha"
+            android:text="@string/t5_historico_vazio"
+            android:textColor="@color/neo_texto"
+            android:textSize="@dimen/texto_subtitulo" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:minHeight="@dimen/espaco_g" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVoltarCodigo"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/altura_botao"
+            android:text="@string/btn_voltar"
+            android:textColor="@color/neo_texto"
+            app:strokeColor="@color/neo_roxo" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEncerrarCodigo"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/altura_botao"
+            android:layout_marginTop="@dimen/espaco_p"
+            android:text="@string/btn_encerrar"
+            android:textColor="@color/neo_erro" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
